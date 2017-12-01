@@ -1,6 +1,8 @@
 # Quadcopter Stereo Camera Formation Control
 This is a simulation of a Quadcopter Stereo Camera Formation Control that uses the nonlinear quadcopter simulator found at https://github.com/abhijitmajumdar/Quadcopter_simulator
 
+![Quadcopter Stereo Camera Formation Control](/formctrl.gif?raw=true "formctrl")
+
 ## Dependencies
 - Simulation of dynamics:
     - Numpy
