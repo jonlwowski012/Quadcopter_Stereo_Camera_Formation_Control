@@ -516,9 +516,9 @@ def Run():
 		for key in quads:
 			gui.quads[key]['position'] = quad.get_position(key)
 			gui.quads[key]['orientation'] = quad.get_orientation(key)
-		with open('/home/ace/catkin_ws/src/Quadcopter_simulator/results/MPC/large_window_results.csv', 'a') as fp:
+		'''with open('/home/ace/catkin_ws/src/Quadcopter_simulator/results/MPC/large_window_results.csv', 'a') as fp:
 			r_writer = csv.writer(fp, delimiter=',')
-			r_writer.writerow([quad.get_position('q1')[0],quad.get_position('q1')[1],quad.get_position('q2')[0],quad.get_position('q2')[1],quad.get_position('q3')[0],quad.get_position('q3')[1]])
+			r_writer.writerow([quad.get_position('q1')[0],quad.get_position('q1')[1],quad.get_position('q2')[0],quad.get_position('q2')[1],quad.get_position('q3')[0],quad.get_position('q3')[1]])'''
 		gui.update()
 		
  
