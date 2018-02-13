@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<launch>
+ 
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+     <arg name="world_name" value="$(find GazeboSimulation)/worlds/boat_world.world"/>
+     <arg name="gui" value="false"/> 
+     <arg name="headless" value="false" />
+  </include>
+
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor.gazebo.xacro" />
+
+   
+   <group ns="uav1">
+     <include file="$(find GazeboSimulation)/launch/spawn_quadrotor_with_downward_stereo_cam.launch">
+       <arg name="name" value="uav1" />
+       <arg name="tf_prefix" value="uav1" />
+       <arg name="x" value="0.0" />
+       <arg name="y" value="0.0" />
+       <arg name="z" value="0.02" />
+       <arg name="use_ground_truth_for_tf" value="false"/>
+       <arg name="use_ground_truth_for_control" value="false"/>
+       <arg name="use_pose_estimation" value="true"/>
+     </include>
+     <node name="mav_search_and_localize" pkg="GazeboSimulation" type="master.py" output="log"/>
+     <node name="stereo_image_proc" pkg="stereo_image_proc" type="stereo_image_proc"/>
+     <node name="master_velocity_delayer" pkg="GazeboSimulation" type="master_velocity_delayer.py"/>
+     <node name="master_position_delayer" pkg="GazeboSimulation" type="master_position_delayer.py"/>
+     <node name="master_projection_delayer" pkg="GazeboSimulation" type="master_point_delayer.py"/>
+     <!--<node pkg="hector_pose_estimation" type="pose_estimation" name="hector_pose_estimation" /> -->
+   </group>
+   
+
+
+   <group ns="uav2">
+     <include file="$(find GazeboSimulation)/launch/spawn_quadrotor_with_downward_stereo_cam.launch">
+       <arg name="name" value="uav2" />
+       <arg name="tf_prefix" value="uav2" />
+       <arg name="x" value="-5" />
+       <arg name="y" value="-5" />
+       <arg name="z" value="0.02" />
+       <arg name="use_ground_truth_for_tf" value="false"/>
+       <arg name="use_ground_truth_for_control" value="false"/>
+       <arg name="use_pose_estimation" value="true"/>
+     </include>
+     <arg name="name" value="uav2" />
+     <node name="mav_search_and_localize" pkg="GazeboSimulation" type="slave_pid_delayed.py" output="screen"/>
+     <node name="stereo_image_proc" pkg="stereo_image_proc" type="stereo_image_proc"/>
+   </group>
+   
+
+   <!--
+   <group ="uav3">
+     <include file="$(find GazeboSimulation)/launch/spawn_quadrotor_with_downward_stereo_cam.launch">
+       <arg name="name" value="uav3" />
+       <arg name="tf_prefix" value="uav3" />
+       <arg name="x" value="-500" />
+       <arg name="y" value="500" />
+       <arg name="z" value="0.02" />
+       <arg name="use_ground_truth_for_tf" value="false"/>
+       <arg name="use_ground_truth_for_control" value="false"/>
+       <arg name="use_pose_estimation" value="true"/>
+     </include>
+     <arg name="name" value="uav3" />
+     <node name="mav_search_and_localize" pkg="GazeboSimulation" type="slave2.py" output="screen"/>
+     <node name="stereo_image_proc" pkg="stereo_image_proc" type="stereo_image_proc"/>
+   </group>-->
+ <!-- 
+   <group ns="uav4">
+     <include file="$(find GazeboSimulation)/launch/spawn_quadrotor_with_downward_stereo_cam.launch">
+       <arg name="name" value="uav4" />
+       <arg name="tf_prefix" value="uav4" />
+       <arg name="x" value="5.0" />
+       <arg name="y" value="-2.0" />
+       <arg name="z" value="0.02" />
+     </include>
+     <arg name="name" value="uav4" />
+     <node name="mav_search_and_localize" pkg="GazeboSimulation" type="universal_mav_search_and_localize.py" />
+     <node name="stereo_image_proc" pkg="stereo_image_proc" type="stereo_image_proc"/>
+   </group>
+-->
+  
+</launch>
+

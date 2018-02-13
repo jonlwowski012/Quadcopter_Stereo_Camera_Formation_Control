@@ -1,0 +1,20 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"_left_camera_frame" [label="_left_camera_frame"];
+"_left_camera_optical_frame" [label="_left_camera_optical_frame"];
+"_right_camera_frame" [label="_right_camera_frame"];
+"_right_camera_optical_frame" [label="_right_camera_optical_frame"];
+"sonar_link" [label="sonar_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "_left_camera_frame_joint" [label="xyz: 0 0 -0.2 \nrpy: 0 1.5707 0"]
+"_left_camera_frame_joint" -> "_left_camera_frame"
+"_left_camera_frame" -> "_left_camera_optical_frame_joint" [label="xyz: 0 0 0 \nrpy: -1.5708 -0 -1.5708"]
+"_left_camera_optical_frame_joint" -> "_left_camera_optical_frame"
+"_left_camera_frame" -> "_right_camera_frame_joint" [label="xyz: 0 -0.1 -0 \nrpy: 0 -0 0"]
+"_right_camera_frame_joint" -> "_right_camera_frame"
+"_right_camera_frame" -> "_right_camera_optical_frame_joint" [label="xyz: 0 0 0 \nrpy: -1.5708 -0 -1.5708"]
+"_right_camera_optical_frame_joint" -> "_right_camera_optical_frame"
+"base_link" -> "sonar_joint" [label="xyz: -0.16 0 -0.012 \nrpy: 0 1.5708 0"]
+"sonar_joint" -> "sonar_link"
+}

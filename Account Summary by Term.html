@@ -1,0 +1,2548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="Account%20Summary%20by%20Term_files/web_defaultapp.css" type="text/css">
+<link rel="stylesheet" href="Account%20Summary%20by%20Term_files/web_defaultprint.css" type="text/css" media="print">
+<title>Account Summary by Term</title>
+<meta http-equiv="Content-Script-Type" name="Default_Script_Language" content="text/javascript">
+<script language="JavaScript" type="text/javascript">
+<!-- Hide JavaScript from older browsers 
+window.onunload = function() {submitcount=0;}
+var submitcount=0;
+function checkSubmit() {
+if (submitcount == 0)
+   {
+   submitcount++;
+   return true;
+   }
+else
+   {
+alert("Your changes have already been submitted.");
+   return false;
+   }
+}
+//  End script hiding -->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!-- Hide JavaScript from older browsers 
+//  Function to open a window
+function windowOpen(window_url) {
+   helpWin = window.open(window_url,'','toolbar=yes,status=no,scrollbars=yes,menubar=yes,resizable=yes,directories=no,location=no,width=350,height=400');
+   if (document.images) { 
+       if (helpWin) helpWin.focus()
+   }
+}
+//  End script hiding -->
+</script>
+</head>
+<body>
+<div class="headerwrapperdiv">
+<div class="pageheaderdiv1">
+<a href="#main_content" onmouseover="window.status='Go to Main Content'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Go to Main Content'; return true" onblur="window.status=''; return true" class="skiplinks">Go to Main Content</a>
+<h1><center>University of Texas at San Antonio <p> Automated Student Access Program (ASAP) </p></center></h1></div><div class="headerlinksdiv">
+<h1><center>University of Texas at San Antonio <p> Automated Student Access Program (ASAP) </p></center></h1></div><div class="headerlinksdiv"><div class="headerlinksdiv">
+<span class="pageheaderlinks2">
+<map name="Module_Navigation_Links_H" title="Module Navigation Links">
+<p>
+<a href="#skip_Module_Navigation_Links_H" onmouseover="window.status='Skip Module Navigation Links'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Skip Module Navigation Links'; return true" onblur="window.status=''; return true" class="skiplinks">Skip Module Navigation Links</a>
+</p><table class="plaintable" summary="This is main table for displaying Tab Items." width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td class="pldefault">
+<table class="plaintable" summary="This table displays Tab Items." cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td class="taboff" height="22">
+<a href="https://asap.utsa.edu/pls/prod/twbkwbis.P_GenMenu?name=bmenu.P_GenMnu" onmouseover="window.status='New Personal Information'; return true" onmouseout="window.status=''; return true" onfocus="window.status='New Personal Information'; return true" onblur="window.status=''; return true">Personal Information</a>
+</td>
+<td class="bgtaboff" valign="top" height="22" align="right">
+<img src="Account%20Summary%20by%20Term_files/web_tab_corner_right.gif" alt="Tab Corner Right" class="headerImg" title="Tab Corner Right" name="web_tab_corner_right" width="8" vspace="0" hspace="0" height="20" border="0">
+</td>
+<td class="taboff" height="22">
+<a href="https://asap.utsa.edu/pls/prod/xwskadrr.P_FutureRRMnu">Future Roadrunner</a>
+</td>
+<td class="bgtaboff" valign="top" height="22" align="right">
+<img src="Account%20Summary%20by%20Term_files/web_tab_corner_right.gif" alt="Tab Corner Right" class="headerImg" title="Tab Corner Right" name="web_tab_corner_right" width="8" vspace="0" hspace="0" height="20" border="0">
+</td>
+<td class="tabon" height="22">
+<a href="https://asap.utsa.edu/pls/prod/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu" onmouseover="window.status='Student Services'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Student Services'; return true" onblur="window.status=''; return true">Student Services</a>
+</td>
+<td class="bgtabon" valign="top" height="22" align="right">
+<img src="Account%20Summary%20by%20Term_files/web_tab_corner_right.gif" alt="Tab Corner Right" class="headerImg" title="Tab Corner Right" name="web_tab_corner_right" width="8" vspace="0" hspace="0" height="20" border="0">
+</td>
+<td class="taboff" height="22">
+<a href="https://asap.utsa.edu/pls/prod/twbkwbis.P_GenMenu?name=bmenu.P_FiscalSvc" onmouseover="window.status='Fiscal Services'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Fiscal Services'; return true" onblur="window.status=''; return true">Fiscal Services</a>
+</td>
+<td class="bgtaboff" valign="top" height="22" align="right">
+<img src="Account%20Summary%20by%20Term_files/web_tab_corner_right.gif" alt="Tab Corner Right" class="headerImg" title="Tab Corner Right" name="web_tab_corner_right" width="8" vspace="0" hspace="0" height="20" border="0">
+</td>
+<td class="taboff" height="22">
+<a href="https://asap.utsa.edu/pls/prod/twbkwbis.P_GenMenu?name=bmenu.P_FinAidMainMnu" onmouseover="window.status='Financial Aid'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Financial Aid'; return true" onblur="window.status=''; return true">Financial Aid</a>
+</td>
+<td class="bgtaboff" valign="top" height="22" align="right">
+<img src="Account%20Summary%20by%20Term_files/web_tab_corner_right.gif" alt="Tab Corner Right" class="headerImg" title="Tab Corner Right" name="web_tab_corner_right" width="8" vspace="0" hspace="0" height="20" border="0">
+</td>
+<td class="taboff" height="22">
+<a href="https://asap.utsa.edu/pls/prod/twbkwbis.P_GenMenu?name=bmenu.P_ProxyMenu">Family Proxy</a>
+</td>
+<td class="bgtaboff" valign="top" height="22" align="right">
+<img src="Account%20Summary%20by%20Term_files/web_tab_corner_right.gif" alt="Tab Corner Right" class="headerImg" title="Tab Corner Right" name="web_tab_corner_right" width="8" vspace="0" hspace="0" height="20" border="0">
+</td>
+<td class="taboff" height="22">
+<a href="https://mail.google.com/a/my.utsa.edu" target="blank" "=""><b>MyUTSA mail</b></a>
+</td>
+<td class="bgtaboff" valign="top" height="22" align="right">
+<img src="Account%20Summary%20by%20Term_files/web_tab_corner_right.gif" alt="Tab Corner Right" class="headerImg" title="Tab Corner Right" name="web_tab_corner_right" width="8" vspace="0" hspace="0" height="20" border="0">
+</td>
+<td class="taboff" height="22">
+<a href="http://my.utsa.edu/asap/faqs.html"><b>ASAP FAQ</b></a>
+</td>
+<td class="bgtaboff" valign="top" height="22" align="right">
+<img src="Account%20Summary%20by%20Term_files/web_tab_corner_right.gif" alt="Tab Corner Right" class="headerImg" title="Tab Corner Right" name="web_tab_corner_right" width="8" vspace="0" hspace="0" height="20" border="0">
+</td>
+<td class="taboff" height="22">
+<a href="https://asap.utsa.edu/pls/prod/xwskswdl.p_swdl_menu" onmouseover="window.status='Software Downloads'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Software Downloads'; return true" onblur="window.status=''; return true">Software Downloads</a>
+</td>
+<td class="bgtaboff" valign="top" height="22" align="right">
+<img src="Account%20Summary%20by%20Term_files/web_tab_corner_right.gif" alt="Tab Corner Right" class="headerImg" title="Tab Corner Right" name="web_tab_corner_right" width="8" vspace="0" hspace="0" height="20" border="0">
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td class="bgtabon" colspan="2" width="100%"><img src="Account%20Summary%20by%20Term_files/web_transparent.gif" alt="Transparent Image" class="headerImg" title="Transparent Image" name="web_transparent" width="10" vspace="0" hspace="0" height="3" border="0"></td></tr></tbody></table>
+</map>
+</span>
+<a name="skip_Module_Navigation_Links_H"></a>
+</div>
+<table class="plaintable" summary="This table displays Menu Items and Banner Search textbox." width="100%">
+<tbody><tr>
+<td class="pldefault">
+<div class="headerlinksdiv2">
+<form action="/pls/prod/twbksrch.P_ShowResults" method="POST">
+Search
+<span class="fieldlabeltextinvisible"><label for="keyword_in_id"><span class="fieldlabeltext">Search</span></label></span>
+<input name="KEYWRD_IN" size="20" maxlength="65" id="keyword_in_id" type="text">
+<input value="Go" type="submit">
+</form>
+</div>
+</td>
+<td class="pldefault"><p class="rightaligntext"></p>
+<span class="pageheaderlinks">
+<a href="https://asap.utsa.edu/pls/prod/twbkwbis.P_GenMenu?name=bmenu.P_AdminMnu" class="submenulinktext2" id="ssbbackurl">RETURN TO MENU</a>
+|
+<a href="https://asap.utsa.edu/pls/prod/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu&amp;depth_in=2&amp;columns_in=3" accesskey="2" class="submenulinktext2">SITE MAP</a>
+|
+<a href="https://asap.utsa.edu/pls/prod/twbkfrmt.P_DispHelp?pagename_in=bwskoacc.P_ViewAcct" accesskey="H" onclick="popup = window.open('/pls/prod/twbkfrmt.P_DispHelp?pagename_in=bwskoacc.P_ViewAcct', 'PopupPage','height=500,width=450,scrollbars=yes,resizable=yes'); return false" target="_blank" onmouseover="window.status='';  return true" onmouseout="window.status=''; return true" onfocus="window.status='';  return true" onblur="window.status=''; return true" class="submenulinktext2">HELP</a>
+|
+<a href="https://asap.utsa.edu/pls/prod/xwgkpeml.p_studPrefCheck" accesskey="3" class="submenulinktext2">EXIT</a>
+</span>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="pagetitlediv">
+<table class="plaintable" summary="This table displays title and static header displays." width="100%">
+<tbody><tr>
+<td class="pldefault">
+<h2>Account Summary by Term</h2>
+</td>
+<td class="pldefault">
+&nbsp;
+</td>
+<td class="pldefault"><p class="rightaligntext"></p>
+<div class="staticheaders">
+@01319517 Jonathan R. Lwowski<br>
+Jan 09, 2018 02:44 pm<br>
+</div>
+</td>
+</tr>
+<tr>
+<td class="bg3" colspan="3" width="100%"><img src="Account%20Summary%20by%20Term_files/web_transparent.gif" alt="Transparent Image" class="headerImg" title="Transparent Image" name="web_transparent" width="10" vspace="0" hspace="0" height="3" border="0"></td>
+</tr>
+</tbody></table>
+<a name="main_content"></a>
+</div>
+<div class="pagebodydiv">
+<!--  ** END OF twbkwbis.P_OpenDoc **  -->
+<p class="whitespace1">
+</p><div class="infotextdiv"><table class="infotexttable" summary="This layout table contains information that may be helpful in understanding the content and functionality of this page.  It could be a brief set of instructions, a description of error messages, or other special information."><tbody><tr><td class="indefault"><img src="Account%20Summary%20by%20Term_files/twgginfo.gif" alt="Note" class="headerImg" title="Note" name="GeneralNote" width="27" vspace="0" hspace="0" height="24" align="top" border="0"></td><td class="indefault"><span class="infotext"> This is your account summary by term. Anticipated third party contract payments, financial aid, and memos are <b>NOT</b> included in the summary. 
+You can mail payment to:<br>
+<b> UTSA Fiscal Services<br>
+One UTSA Circle<br>
+San Antonio, TX 78249 </b>
+<br><br>
+<font color="red">To select the Installment Payment Plan, scroll down to bottom links.</font></span></td></tr></tbody></table><p></p></div>
+<table class="datadisplaytable" summary="This table displays summarized charge and payment transactions by term on your academic record."><caption class="captiontext">Summary</caption>
+<tbody><tr><th colspan="4" class="ddlabel" scope="row">Total Account Balance:</th>
+<td class="dddefault"><p class="rightaligntext">                    $3,918.84</p></td>
+</tr>
+<tr>
+<th colspan="5" class="ddlabel" scope="row"><a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewAcctTerm?term_in=201820">Spring 2018</a></th>
+</tr>
+<tr>
+<th class="ddheader" scope="col">Detail Code</th>
+<th class="ddheader" scope="col">Description</th>
+<th class="ddheader" scope="col">Charge</th>
+<th class="ddheader" scope="col">Payment</th>
+</tr>
+<tr>
+<td class="dddefault">CA01</td>
+<td class="dddefault">Automated Services Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $300.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">CEGS</td>
+<td class="dddefault">Graduate Service Chg-Eng</td>
+<td class="dddefault"><p class="rightaligntext">                       $60.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">G002</td>
+<td class="dddefault">Tuition-Designated Funds Grad</td>
+<td class="dddefault"><p class="rightaligntext">                    $3,284.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">GIT1</td>
+<td class="dddefault">Tuition-Graduate Incremental</td>
+<td class="dddefault"><p class="rightaligntext">                      $800.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IE01</td>
+<td class="dddefault">International Education Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LM01</td>
+<td class="dddefault">Library Resource Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $224.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRE1</td>
+<td class="dddefault">Learning Resources-Engineering</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MS01</td>
+<td class="dddefault">Medical Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $32.70</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RF01</td>
+<td class="dddefault">Recreation Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RP01</td>
+<td class="dddefault">Student Data Management Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">S001</td>
+<td class="dddefault">Student Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $184.80</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SATH</td>
+<td class="dddefault">Athletics Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $240.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SP01</td>
+<td class="dddefault">Publication Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSE</td>
+<td class="dddefault">Tech Srv/Instruct Support-COE</td>
+<td class="dddefault"><p class="rightaligntext">                      $160.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">T001</td>
+<td class="dddefault">Tuition - Texas Resident</td>
+<td class="dddefault"><p class="rightaligntext">                      $800.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TEAM</td>
+<td class="dddefault">Teaching &amp; Learning Ctr Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TF01</td>
+<td class="dddefault">Transportation Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">U001</td>
+<td class="dddefault">University Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">YID1</td>
+<td class="dddefault">ID Card Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $3.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">F570</td>
+<td class="dddefault">James Wagener Presidential Sch</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $1,500.00</p></td>
+</tr>
+<tr>
+<td class="dddefault">FZAS</td>
+<td class="dddefault">Elec Engineering Stipend</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $1,071.66</p></td>
+</tr>
+<tr>
+<th colspan="2" class="ddlabel" scope="row">Term Charges:</th>
+<td class="dddefault"><p class="rightaligntext">                    $6,490.50</p></td>
+</tr>
+<tr>
+<th colspan="3" class="ddlabel" scope="row">Term Credits and Payments:</th>
+<td class="dddefault"><p class="rightaligntext">                    $2,571.66</p></td>
+</tr>
+
+<tr>
+<td colspan="5" class="ddseparator">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="5" class="ddlabel" scope="row"><a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewAcctTerm?term_in=201810">Fall 2017</a></th>
+</tr>
+<tr>
+<th class="ddheader" scope="col">Detail Code</th>
+<th class="ddheader" scope="col">Description</th>
+<th class="ddheader" scope="col">Charge</th>
+<th class="ddheader" scope="col">Payment</th>
+</tr>
+<tr>
+<td class="dddefault">CA01</td>
+<td class="dddefault">Automated Services Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $225.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">CEGS</td>
+<td class="dddefault">Graduate Service Chg-Eng</td>
+<td class="dddefault"><p class="rightaligntext">                       $60.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">G002</td>
+<td class="dddefault">Tuition-Designated Funds Grad</td>
+<td class="dddefault"><p class="rightaligntext">                    $1,847.25</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">GIT1</td>
+<td class="dddefault">Tuition-Graduate Incremental</td>
+<td class="dddefault"><p class="rightaligntext">                      $450.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IE01</td>
+<td class="dddefault">International Education Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LM01</td>
+<td class="dddefault">Library Resource Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $126.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRE1</td>
+<td class="dddefault">Learning Resources-Engineering</td>
+<td class="dddefault"><p class="rightaligntext">                       $60.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MS01</td>
+<td class="dddefault">Medical Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $32.70</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">PP01</td>
+<td class="dddefault">Parking Permit</td>
+<td class="dddefault"><p class="rightaligntext">                      $155.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">REFD</td>
+<td class="dddefault">General Refund Account</td>
+<td class="dddefault"><p class="rightaligntext">                    $7,546.41</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RF01</td>
+<td class="dddefault">Recreation Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RP01</td>
+<td class="dddefault">Student Data Management Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">S001</td>
+<td class="dddefault">Student Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $138.60</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SATH</td>
+<td class="dddefault">Athletics Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $180.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SP01</td>
+<td class="dddefault">Publication Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSE</td>
+<td class="dddefault">Tech Srv/Instruct Support-COE</td>
+<td class="dddefault"><p class="rightaligntext">                       $90.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">T001</td>
+<td class="dddefault">Tuition - Texas Resident</td>
+<td class="dddefault"><p class="rightaligntext">                      $450.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TEAM</td>
+<td class="dddefault">Teaching &amp; Learning Ctr Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TF01</td>
+<td class="dddefault">Transportation Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">U001</td>
+<td class="dddefault">University Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $90.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">YID1</td>
+<td class="dddefault">ID Card Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $3.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">F570</td>
+<td class="dddefault">James Wagener Presidential Sch</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $1,500.00</p></td>
+</tr>
+<tr>
+<td class="dddefault">FE0H</td>
+<td class="dddefault">Elec Engineering Tuition</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $3,914.55</p></td>
+</tr>
+<tr>
+<td class="dddefault">FZFG</td>
+<td class="dddefault">Electrical Engineering Stipend</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $6,201.41</p></td>
+</tr>
+<tr>
+<th colspan="2" class="ddlabel" scope="row">Term Charges:</th>
+<td class="dddefault"><p class="rightaligntext">                   $11,615.96</p></td>
+</tr>
+<tr>
+<th colspan="3" class="ddlabel" scope="row">Term Credits and Payments:</th>
+<td class="dddefault"><p class="rightaligntext">                   $11,615.96</p></td>
+</tr>
+
+<tr>
+<td colspan="5" class="ddseparator">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="5" class="ddlabel" scope="row"><a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewAcctTerm?term_in=201720">Spring 2017</a></th>
+</tr>
+<tr>
+<th class="ddheader" scope="col">Detail Code</th>
+<th class="ddheader" scope="col">Description</th>
+<th class="ddheader" scope="col">Charge</th>
+<th class="ddheader" scope="col">Payment</th>
+</tr>
+<tr>
+<td class="dddefault">CA01</td>
+<td class="dddefault">Automated Services Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $225.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">CEGS</td>
+<td class="dddefault">Graduate Service Chg-Eng</td>
+<td class="dddefault"><p class="rightaligntext">                       $60.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">G002</td>
+<td class="dddefault">Tuition-Designated Funds Grad</td>
+<td class="dddefault"><p class="rightaligntext">                    $1,692.81</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">GIT1</td>
+<td class="dddefault">Tuition-Graduate Incremental</td>
+<td class="dddefault"><p class="rightaligntext">                      $450.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IE01</td>
+<td class="dddefault">International Education Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LM01</td>
+<td class="dddefault">Library Resource Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $126.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRE1</td>
+<td class="dddefault">Learning Resources-Engineering</td>
+<td class="dddefault"><p class="rightaligntext">                       $60.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MS01</td>
+<td class="dddefault">Medical Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $32.70</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">REFD</td>
+<td class="dddefault">General Refund Account</td>
+<td class="dddefault"><p class="rightaligntext">                    $6,073.22</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RF01</td>
+<td class="dddefault">Recreation Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RP01</td>
+<td class="dddefault">Student Data Management Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">S001</td>
+<td class="dddefault">Student Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $138.60</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SATH</td>
+<td class="dddefault">Athletics Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $180.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SP01</td>
+<td class="dddefault">Publication Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSE</td>
+<td class="dddefault">Tech Srv/Instruct Support-COE</td>
+<td class="dddefault"><p class="rightaligntext">                       $90.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">T001</td>
+<td class="dddefault">Tuition - Texas Resident</td>
+<td class="dddefault"><p class="rightaligntext">                      $450.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TEAM</td>
+<td class="dddefault">Teaching &amp; Learning Ctr Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TF01</td>
+<td class="dddefault">Transportation Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">U001</td>
+<td class="dddefault">University Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $90.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">YID1</td>
+<td class="dddefault">ID Card Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $3.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">F570</td>
+<td class="dddefault">James Wagener Presidential Sch</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $1,500.00</p></td>
+</tr>
+<tr>
+<td class="dddefault">FE0H</td>
+<td class="dddefault">Elec Engineering Tuition</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $3,500.00</p></td>
+</tr>
+<tr>
+<td class="dddefault">FZAS</td>
+<td class="dddefault">Elec Engineering Stipend</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $4,333.33</p></td>
+</tr>
+<tr>
+<td class="dddefault">FZFG</td>
+<td class="dddefault">Electrical Engineering Stipend</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $4,333.33</p></td>
+</tr>
+<tr>
+<td class="dddefault">FZH3</td>
+<td class="dddefault">Elec Engr Doctoral Stipend</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                      $500.00</p></td>
+</tr>
+<tr>
+<th colspan="2" class="ddlabel" scope="row">Term Charges:</th>
+<td class="dddefault"><p class="rightaligntext">                    $9,833.33</p></td>
+</tr>
+<tr>
+<th colspan="3" class="ddlabel" scope="row">Term Credits and Payments:</th>
+<td class="dddefault"><p class="rightaligntext">                   $14,166.66</p></td>
+</tr>
+
+<tr>
+<td colspan="5" class="ddseparator">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="5" class="ddlabel" scope="row"><a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewAcctTerm?term_in=201710">Fall 2016</a></th>
+</tr>
+<tr>
+<th class="ddheader" scope="col">Detail Code</th>
+<th class="ddheader" scope="col">Description</th>
+<th class="ddheader" scope="col">Charge</th>
+<th class="ddheader" scope="col">Payment</th>
+</tr>
+<tr>
+<td class="dddefault">CA01</td>
+<td class="dddefault">Automated Services Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $225.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">CEGS</td>
+<td class="dddefault">Graduate Service Chg-Eng</td>
+<td class="dddefault"><p class="rightaligntext">                       $60.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">G002</td>
+<td class="dddefault">Tuition-Designated Funds Grad</td>
+<td class="dddefault"><p class="rightaligntext">                    $1,692.81</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">GIT1</td>
+<td class="dddefault">Tuition-Graduate Incremental</td>
+<td class="dddefault"><p class="rightaligntext">                      $450.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IE01</td>
+<td class="dddefault">International Education Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LM01</td>
+<td class="dddefault">Library Resource Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $126.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRE1</td>
+<td class="dddefault">Learning Resources-Engineering</td>
+<td class="dddefault"><p class="rightaligntext">                       $60.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MS01</td>
+<td class="dddefault">Medical Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $32.70</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">REFD</td>
+<td class="dddefault">General Refund Account</td>
+<td class="dddefault"><p class="rightaligntext">                   $14,622.54</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RF01</td>
+<td class="dddefault">Recreation Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RP01</td>
+<td class="dddefault">Student Data Management Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">S001</td>
+<td class="dddefault">Student Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $138.60</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SATH</td>
+<td class="dddefault">Athletics Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $180.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SP01</td>
+<td class="dddefault">Publication Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSE</td>
+<td class="dddefault">Tech Srv/Instruct Support-COE</td>
+<td class="dddefault"><p class="rightaligntext">                       $75.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">T001</td>
+<td class="dddefault">Tuition - Texas Resident</td>
+<td class="dddefault"><p class="rightaligntext">                      $450.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TEAM</td>
+<td class="dddefault">Teaching &amp; Learning Ctr Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TF01</td>
+<td class="dddefault">Transportation Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">U001</td>
+<td class="dddefault">University Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $90.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">YID1</td>
+<td class="dddefault">ID Card Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $3.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">CCKW</td>
+<td class="dddefault">Check Payment-Web</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $1,122.56</p></td>
+</tr>
+<tr>
+<td class="dddefault">F570</td>
+<td class="dddefault">James Wagener Presidential Sch</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $1,500.00</p></td>
+</tr>
+<tr>
+<td class="dddefault">F67G</td>
+<td class="dddefault">Electrical Engineering Tuition</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $1,122.55</p></td>
+</tr>
+<tr>
+<td class="dddefault">FE0H</td>
+<td class="dddefault">Elec Engineering Tuition</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $1,122.55</p></td>
+</tr>
+<tr>
+<td class="dddefault">FZ20</td>
+<td class="dddefault">Lutcher Brown Stipend</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                        $0.00</p></td>
+</tr>
+<tr>
+<td class="dddefault">FZAS</td>
+<td class="dddefault">Elec Engineering Stipend</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $4,333.33</p></td>
+</tr>
+<tr>
+<td class="dddefault">FZFG</td>
+<td class="dddefault">Electrical Engineering Stipend</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $4,333.33</p></td>
+</tr>
+<tr>
+<td class="dddefault">FZH3</td>
+<td class="dddefault">Elec Engr Doctoral Stipend</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                      $500.00</p></td>
+</tr>
+<tr>
+<th colspan="2" class="ddlabel" scope="row">Term Charges:</th>
+<td class="dddefault"><p class="rightaligntext">                   $18,367.65</p></td>
+</tr>
+<tr>
+<th colspan="3" class="ddlabel" scope="row">Term Credits and Payments:</th>
+<td class="dddefault"><p class="rightaligntext">                   $14,034.32</p></td>
+</tr>
+
+<tr>
+<td colspan="5" class="ddseparator">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="5" class="ddlabel" scope="row"><a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewAcctTerm?term_in=201630">Summer 2016</a></th>
+</tr>
+<tr>
+<th class="ddheader" scope="col">Detail Code</th>
+<th class="ddheader" scope="col">Description</th>
+<th class="ddheader" scope="col">Charge</th>
+<th class="ddheader" scope="col">Payment</th>
+</tr>
+<tr>
+<td class="dddefault">CA01</td>
+<td class="dddefault">Automated Services Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $100.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">G001</td>
+<td class="dddefault">Tuition-Designated Funds</td>
+<td class="dddefault"><p class="rightaligntext">                      $149.41</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IE01</td>
+<td class="dddefault">International Education Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LM01</td>
+<td class="dddefault">Library Resource Charge</td>
+<td class="dddefault"><p class="rightaligntext">                       $14.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRE1</td>
+<td class="dddefault">Learning Resources-Engineering</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MS01</td>
+<td class="dddefault">Medical Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $32.70</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">REFD</td>
+<td class="dddefault">General Refund Account</td>
+<td class="dddefault"><p class="rightaligntext">                    $2,383.49</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RF01</td>
+<td class="dddefault">Recreation Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RP01</td>
+<td class="dddefault">Student Data Management Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">S001</td>
+<td class="dddefault">Student Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $15.40</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SATH</td>
+<td class="dddefault">Athletics Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SP01</td>
+<td class="dddefault">Publication Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSE</td>
+<td class="dddefault">Tech Srv/Instruct Support-COE</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">T001</td>
+<td class="dddefault">Tuition - Texas Resident</td>
+<td class="dddefault"><p class="rightaligntext">                       $50.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TEAM</td>
+<td class="dddefault">Teaching &amp; Learning Ctr Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TF01</td>
+<td class="dddefault">Transportation Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">U001</td>
+<td class="dddefault">University Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $40.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">YID1</td>
+<td class="dddefault">ID Card Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $3.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">FZAS</td>
+<td class="dddefault">Elec Engineering Stipend</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $3,000.00</p></td>
+</tr>
+<tr>
+<th colspan="2" class="ddlabel" scope="row">Term Charges:</th>
+<td class="dddefault"><p class="rightaligntext">                    $3,000.00</p></td>
+</tr>
+<tr>
+<th colspan="3" class="ddlabel" scope="row">Term Credits and Payments:</th>
+<td class="dddefault"><p class="rightaligntext">                    $3,000.00</p></td>
+</tr>
+
+<tr>
+<td colspan="5" class="ddseparator">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="5" class="ddlabel" scope="row"><a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewAcctTerm?term_in=201620">Spring 2016</a></th>
+</tr>
+<tr>
+<th class="ddheader" scope="col">Detail Code</th>
+<th class="ddheader" scope="col">Description</th>
+<th class="ddheader" scope="col">Charge</th>
+<th class="ddheader" scope="col">Payment</th>
+</tr>
+<tr>
+<td class="dddefault">CA01</td>
+<td class="dddefault">Automated Services Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $300.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">G001</td>
+<td class="dddefault">Tuition-Designated Funds</td>
+<td class="dddefault"><p class="rightaligntext">                    $1,792.92</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IE01</td>
+<td class="dddefault">International Education Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LM01</td>
+<td class="dddefault">Library Resource Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $168.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRE1</td>
+<td class="dddefault">Learning Resources-Engineering</td>
+<td class="dddefault"><p class="rightaligntext">                       $40.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MS01</td>
+<td class="dddefault">Medical Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $32.70</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">PCHC</td>
+<td class="dddefault">Programs Charge-Honors College</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">REFD</td>
+<td class="dddefault">General Refund Account</td>
+<td class="dddefault"><p class="rightaligntext">                    $8,156.58</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RF01</td>
+<td class="dddefault">Recreation Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RP01</td>
+<td class="dddefault">Student Data Management Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">S001</td>
+<td class="dddefault">Student Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $184.80</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SATH</td>
+<td class="dddefault">Athletics Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $240.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SP01</td>
+<td class="dddefault">Publication Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSE</td>
+<td class="dddefault">Tech Srv/Instruct Support-COE</td>
+<td class="dddefault"><p class="rightaligntext">                       $60.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">T001</td>
+<td class="dddefault">Tuition - Texas Resident</td>
+<td class="dddefault"><p class="rightaligntext">                      $600.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TEAM</td>
+<td class="dddefault">Teaching &amp; Learning Ctr Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TF01</td>
+<td class="dddefault">Transportation Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">U001</td>
+<td class="dddefault">University Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">UGAF</td>
+<td class="dddefault">Undergraduate Advising Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">YID1</td>
+<td class="dddefault">ID Card Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $3.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">FT34</td>
+<td class="dddefault">Terry Foundation Scholarship</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                   $12,000.00</p></td>
+</tr>
+<tr>
+<th colspan="2" class="ddlabel" scope="row">Term Charges:</th>
+<td class="dddefault"><p class="rightaligntext">                   $12,000.00</p></td>
+</tr>
+<tr>
+<th colspan="3" class="ddlabel" scope="row">Term Credits and Payments:</th>
+<td class="dddefault"><p class="rightaligntext">                   $12,000.00</p></td>
+</tr>
+
+<tr>
+<td colspan="5" class="ddseparator">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="5" class="ddlabel" scope="row"><a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewAcctTerm?term_in=201610">Fall 2015</a></th>
+</tr>
+<tr>
+<th class="ddheader" scope="col">Detail Code</th>
+<th class="ddheader" scope="col">Description</th>
+<th class="ddheader" scope="col">Charge</th>
+<th class="ddheader" scope="col">Payment</th>
+</tr>
+<tr>
+<td class="dddefault">CA01</td>
+<td class="dddefault">Automated Services Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $300.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">G001</td>
+<td class="dddefault">Tuition-Designated Funds</td>
+<td class="dddefault"><p class="rightaligntext">                    $1,942.33</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">GES1</td>
+<td class="dddefault">Green/Environmental Svc Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $0.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IE01</td>
+<td class="dddefault">International Education Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">L001</td>
+<td class="dddefault">Laboratory Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $30.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LM01</td>
+<td class="dddefault">Library Resource Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $182.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRE1</td>
+<td class="dddefault">Learning Resources-Engineering</td>
+<td class="dddefault"><p class="rightaligntext">                       $60.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MS01</td>
+<td class="dddefault">Medical Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $32.70</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">PCHC</td>
+<td class="dddefault">Programs Charge-Honors College</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">REFD</td>
+<td class="dddefault">General Refund Account</td>
+<td class="dddefault"><p class="rightaligntext">                    $7,863.17</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RF01</td>
+<td class="dddefault">Recreation Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RP01</td>
+<td class="dddefault">Student Data Management Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">S001</td>
+<td class="dddefault">Student Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $184.80</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SATH</td>
+<td class="dddefault">Athletics Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $240.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SP01</td>
+<td class="dddefault">Publication Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSE</td>
+<td class="dddefault">Tech Srv/Instruct Support-COE</td>
+<td class="dddefault"><p class="rightaligntext">                       $90.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">T001</td>
+<td class="dddefault">Tuition - Texas Resident</td>
+<td class="dddefault"><p class="rightaligntext">                      $650.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TEAM</td>
+<td class="dddefault">Teaching &amp; Learning Ctr Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TF01</td>
+<td class="dddefault">Transportation Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">U001</td>
+<td class="dddefault">University Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">UGAF</td>
+<td class="dddefault">Undergraduate Advising Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">YID1</td>
+<td class="dddefault">ID Card Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $3.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">FT34</td>
+<td class="dddefault">Terry Foundation Scholarship</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                   $12,000.00</p></td>
+</tr>
+<tr>
+<th colspan="2" class="ddlabel" scope="row">Term Charges:</th>
+<td class="dddefault"><p class="rightaligntext">                   $12,000.00</p></td>
+</tr>
+<tr>
+<th colspan="3" class="ddlabel" scope="row">Term Credits and Payments:</th>
+<td class="dddefault"><p class="rightaligntext">                   $12,000.00</p></td>
+</tr>
+
+<tr>
+<td colspan="5" class="ddseparator">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="5" class="ddlabel" scope="row"><a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewAcctTerm?term_in=201520">Spring 2015</a></th>
+</tr>
+<tr>
+<th class="ddheader" scope="col">Detail Code</th>
+<th class="ddheader" scope="col">Description</th>
+<th class="ddheader" scope="col">Charge</th>
+<th class="ddheader" scope="col">Payment</th>
+</tr>
+<tr>
+<td class="dddefault">CA01</td>
+<td class="dddefault">Automated Services Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $300.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">CCDC</td>
+<td class="dddefault">Credit Card Expense Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $0.04</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">CRDW</td>
+<td class="dddefault">UTSA Card - Web</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">G001</td>
+<td class="dddefault">Tuition-Designated Funds</td>
+<td class="dddefault"><p class="rightaligntext">                    $2,390.56</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">GES1</td>
+<td class="dddefault">Green/Environmental Svc Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IE01</td>
+<td class="dddefault">International Education Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">L001</td>
+<td class="dddefault">Laboratory Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LM01</td>
+<td class="dddefault">Library Resource Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $224.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRE1</td>
+<td class="dddefault">Learning Resources-Engineering</td>
+<td class="dddefault"><p class="rightaligntext">                       $60.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRS1</td>
+<td class="dddefault">Learning Resources Fee-COS</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MS01</td>
+<td class="dddefault">Medical Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $32.70</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">PCHC</td>
+<td class="dddefault">Programs Charge-Honors College</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">REFD</td>
+<td class="dddefault">General Refund Account</td>
+<td class="dddefault"><p class="rightaligntext">                    $5,937.94</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RF01</td>
+<td class="dddefault">Recreation Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RP01</td>
+<td class="dddefault">Student Data Management Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">S001</td>
+<td class="dddefault">Student Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $184.80</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SATH</td>
+<td class="dddefault">Athletics Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $240.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SP01</td>
+<td class="dddefault">Publication Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSE</td>
+<td class="dddefault">Tech Srv/Instruct Support-COE</td>
+<td class="dddefault"><p class="rightaligntext">                       $90.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSI</td>
+<td class="dddefault">Tech Srv/Instruct Support-COS</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">T001</td>
+<td class="dddefault">Tuition - Texas Resident</td>
+<td class="dddefault"><p class="rightaligntext">                      $800.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TEAM</td>
+<td class="dddefault">Teaching &amp; Learning Ctr Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TF01</td>
+<td class="dddefault">Transportation Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">U001</td>
+<td class="dddefault">University Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">UGAF</td>
+<td class="dddefault">Undergraduate Advising Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">YID1</td>
+<td class="dddefault">ID Card Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $3.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">CCCW</td>
+<td class="dddefault">Credit Card Payment (Web)</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                        $2.04</p></td>
+</tr>
+<tr>
+<td class="dddefault">FT34</td>
+<td class="dddefault">Terry Foundation Scholarship</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                   $10,750.00</p></td>
+</tr>
+<tr>
+<th colspan="2" class="ddlabel" scope="row">Term Charges:</th>
+<td class="dddefault"><p class="rightaligntext">                   $10,752.04</p></td>
+</tr>
+<tr>
+<th colspan="3" class="ddlabel" scope="row">Term Credits and Payments:</th>
+<td class="dddefault"><p class="rightaligntext">                   $10,752.04</p></td>
+</tr>
+
+<tr>
+<td colspan="5" class="ddseparator">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="5" class="ddlabel" scope="row"><a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewAcctTerm?term_in=201510">Fall 2014</a></th>
+</tr>
+<tr>
+<th class="ddheader" scope="col">Detail Code</th>
+<th class="ddheader" scope="col">Description</th>
+<th class="ddheader" scope="col">Charge</th>
+<th class="ddheader" scope="col">Payment</th>
+</tr>
+<tr>
+<td class="dddefault">CA01</td>
+<td class="dddefault">Automated Services Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $300.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">G001</td>
+<td class="dddefault">Tuition-Designated Funds</td>
+<td class="dddefault"><p class="rightaligntext">                    $2,241.15</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">GES1</td>
+<td class="dddefault">Green/Environmental Svc Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IE01</td>
+<td class="dddefault">International Education Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LM01</td>
+<td class="dddefault">Library Resource Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $210.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRC1</td>
+<td class="dddefault">Learning Resources-Core Curr</td>
+<td class="dddefault"><p class="rightaligntext">                       $12.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRE1</td>
+<td class="dddefault">Learning Resources-Engineering</td>
+<td class="dddefault"><p class="rightaligntext">                       $80.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRLF</td>
+<td class="dddefault">Learning Resources-COLFA</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MS01</td>
+<td class="dddefault">Medical Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $32.70</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">PCHC</td>
+<td class="dddefault">Programs Charge-Honors College</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">REFD</td>
+<td class="dddefault">General Refund Account</td>
+<td class="dddefault"><p class="rightaligntext">                    $6,139.35</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RF01</td>
+<td class="dddefault">Recreation Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RP01</td>
+<td class="dddefault">Student Data Management Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">S001</td>
+<td class="dddefault">Student Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $184.80</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SATH</td>
+<td class="dddefault">Athletics Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $240.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SP01</td>
+<td class="dddefault">Publication Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSE</td>
+<td class="dddefault">Tech Srv/Instruct Support-COE</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">T001</td>
+<td class="dddefault">Tuition - Texas Resident</td>
+<td class="dddefault"><p class="rightaligntext">                      $750.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TEAM</td>
+<td class="dddefault">Teaching &amp; Learning Ctr Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TF01</td>
+<td class="dddefault">Transportation Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">U001</td>
+<td class="dddefault">University Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">UGAF</td>
+<td class="dddefault">Undergraduate Advising Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">YID1</td>
+<td class="dddefault">ID Card Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $3.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">FT34</td>
+<td class="dddefault">Terry Foundation Scholarship</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                   $10,750.00</p></td>
+</tr>
+<tr>
+<th colspan="2" class="ddlabel" scope="row">Term Charges:</th>
+<td class="dddefault"><p class="rightaligntext">                   $10,750.00</p></td>
+</tr>
+<tr>
+<th colspan="3" class="ddlabel" scope="row">Term Credits and Payments:</th>
+<td class="dddefault"><p class="rightaligntext">                   $10,750.00</p></td>
+</tr>
+
+<tr>
+<td colspan="5" class="ddseparator">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="5" class="ddlabel" scope="row"><a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewAcctTerm?term_in=201420">Spring 2014</a></th>
+</tr>
+<tr>
+<th class="ddheader" scope="col">Detail Code</th>
+<th class="ddheader" scope="col">Description</th>
+<th class="ddheader" scope="col">Charge</th>
+<th class="ddheader" scope="col">Payment</th>
+</tr>
+<tr>
+<td class="dddefault">CA01</td>
+<td class="dddefault">Automated Services Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $300.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">G001</td>
+<td class="dddefault">Tuition-Designated Funds</td>
+<td class="dddefault"><p class="rightaligntext">                    $2,241.15</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">GES1</td>
+<td class="dddefault">Green/Environmental Svc Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IE01</td>
+<td class="dddefault">International Education Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">L001</td>
+<td class="dddefault">Laboratory Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $30.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LM01</td>
+<td class="dddefault">Library Resource Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $210.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRC1</td>
+<td class="dddefault">Learning Resources-Core Curr</td>
+<td class="dddefault"><p class="rightaligntext">                       $12.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRE1</td>
+<td class="dddefault">Learning Resources-Engineering</td>
+<td class="dddefault"><p class="rightaligntext">                       $80.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRLF</td>
+<td class="dddefault">Learning Resources-COLFA</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MS01</td>
+<td class="dddefault">Medical Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $32.70</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">PCHC</td>
+<td class="dddefault">Programs Charge-Honors College</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">REFD</td>
+<td class="dddefault">General Refund Account</td>
+<td class="dddefault"><p class="rightaligntext">                    $5,359.35</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RF01</td>
+<td class="dddefault">Recreation Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RP01</td>
+<td class="dddefault">Student Data Management Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">S001</td>
+<td class="dddefault">Student Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $184.80</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SATH</td>
+<td class="dddefault">Athletics Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $240.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SP01</td>
+<td class="dddefault">Publication Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSE</td>
+<td class="dddefault">Tech Srv/Instruct Support-COE</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">T001</td>
+<td class="dddefault">Tuition - Texas Resident</td>
+<td class="dddefault"><p class="rightaligntext">                      $750.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TEAM</td>
+<td class="dddefault">Teaching &amp; Learning Ctr Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TF01</td>
+<td class="dddefault">Transportation Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">U001</td>
+<td class="dddefault">University Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">UGAF</td>
+<td class="dddefault">Undergraduate Advising Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">YID1</td>
+<td class="dddefault">ID Card Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $3.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">FT34</td>
+<td class="dddefault">Terry Foundation Scholarship</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                   $10,000.00</p></td>
+</tr>
+<tr>
+<th colspan="2" class="ddlabel" scope="row">Term Charges:</th>
+<td class="dddefault"><p class="rightaligntext">                   $10,000.00</p></td>
+</tr>
+<tr>
+<th colspan="3" class="ddlabel" scope="row">Term Credits and Payments:</th>
+<td class="dddefault"><p class="rightaligntext">                   $10,000.00</p></td>
+</tr>
+
+<tr>
+<td colspan="5" class="ddseparator">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="5" class="ddlabel" scope="row"><a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewAcctTerm?term_in=201410">Fall 2013</a></th>
+</tr>
+<tr>
+<th class="ddheader" scope="col">Detail Code</th>
+<th class="ddheader" scope="col">Description</th>
+<th class="ddheader" scope="col">Charge</th>
+<th class="ddheader" scope="col">Payment</th>
+</tr>
+<tr>
+<td class="dddefault">CA01</td>
+<td class="dddefault">Automated Services Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $300.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">G001</td>
+<td class="dddefault">Tuition-Designated Funds</td>
+<td class="dddefault"><p class="rightaligntext">                    $2,091.74</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">GES1</td>
+<td class="dddefault">Green/Environmental Svc Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IE01</td>
+<td class="dddefault">International Education Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IUP1</td>
+<td class="dddefault">Instrument User Physics/Astron</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LM01</td>
+<td class="dddefault">Library Resource Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $196.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRC1</td>
+<td class="dddefault">Learning Resources-Core Curr</td>
+<td class="dddefault"><p class="rightaligntext">                       $12.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRE1</td>
+<td class="dddefault">Learning Resources-Engineering</td>
+<td class="dddefault"><p class="rightaligntext">                       $40.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRS1</td>
+<td class="dddefault">Learning Resources Fee-COS</td>
+<td class="dddefault"><p class="rightaligntext">                       $40.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MEPA</td>
+<td class="dddefault">Equip &amp; Materials-Physics/Astr</td>
+<td class="dddefault"><p class="rightaligntext">                       $18.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MS01</td>
+<td class="dddefault">Medical Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $32.70</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">PCHC</td>
+<td class="dddefault">Programs Charge-Honors College</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">PP01</td>
+<td class="dddefault">Parking Permit</td>
+<td class="dddefault"><p class="rightaligntext">                      $140.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">REFD</td>
+<td class="dddefault">General Refund Account</td>
+<td class="dddefault"><p class="rightaligntext">                    $5,594.76</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RF01</td>
+<td class="dddefault">Recreation Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RP01</td>
+<td class="dddefault">Student Data Management Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">S001</td>
+<td class="dddefault">Student Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $184.80</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SATH</td>
+<td class="dddefault">Athletics Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $240.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SP01</td>
+<td class="dddefault">Publication Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSE</td>
+<td class="dddefault">Tech Srv/Instruct Support-COE</td>
+<td class="dddefault"><p class="rightaligntext">                       $60.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSI</td>
+<td class="dddefault">Tech Srv/Instruct Support-COS</td>
+<td class="dddefault"><p class="rightaligntext">                       $40.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">T001</td>
+<td class="dddefault">Tuition - Texas Resident</td>
+<td class="dddefault"><p class="rightaligntext">                      $700.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TEAM</td>
+<td class="dddefault">Teaching &amp; Learning Ctr Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TF01</td>
+<td class="dddefault">Transportation Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">U001</td>
+<td class="dddefault">University Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">UGAF</td>
+<td class="dddefault">Undergraduate Advising Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">YID1</td>
+<td class="dddefault">ID Card Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $3.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">CCCW</td>
+<td class="dddefault">Credit Card Payment (Web)</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                      $140.00</p></td>
+</tr>
+<tr>
+<td class="dddefault">FT34</td>
+<td class="dddefault">Terry Foundation Scholarship</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                   $10,000.00</p></td>
+</tr>
+<tr>
+<th colspan="2" class="ddlabel" scope="row">Term Charges:</th>
+<td class="dddefault"><p class="rightaligntext">                   $10,140.00</p></td>
+</tr>
+<tr>
+<th colspan="3" class="ddlabel" scope="row">Term Credits and Payments:</th>
+<td class="dddefault"><p class="rightaligntext">                   $10,140.00</p></td>
+</tr>
+
+<tr>
+<td colspan="5" class="ddseparator">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="5" class="ddlabel" scope="row"><a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewAcctTerm?term_in=201320">Spring 2013</a></th>
+</tr>
+<tr>
+<th class="ddheader" scope="col">Detail Code</th>
+<th class="ddheader" scope="col">Description</th>
+<th class="ddheader" scope="col">Charge</th>
+<th class="ddheader" scope="col">Payment</th>
+</tr>
+<tr>
+<td class="dddefault">CA01</td>
+<td class="dddefault">Automated Services Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $300.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">CHAP</td>
+<td class="dddefault">Housing-Rent</td>
+<td class="dddefault"><p class="rightaligntext">                    $2,716.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">G001</td>
+<td class="dddefault">Tuition-Designated Funds</td>
+<td class="dddefault"><p class="rightaligntext">                    $2,066.40</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">GES1</td>
+<td class="dddefault">Green/Environmental Svc Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IE01</td>
+<td class="dddefault">International Education Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IUP1</td>
+<td class="dddefault">Instrument User Physics/Astron</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LM01</td>
+<td class="dddefault">Library Resource Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $196.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRC1</td>
+<td class="dddefault">Learning Resources-Core Curr</td>
+<td class="dddefault"><p class="rightaligntext">                       $12.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRE1</td>
+<td class="dddefault">Learning Resources-Engineering</td>
+<td class="dddefault"><p class="rightaligntext">                       $60.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRS1</td>
+<td class="dddefault">Learning Resources Fee-COS</td>
+<td class="dddefault"><p class="rightaligntext">                       $35.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MEPA</td>
+<td class="dddefault">Equip &amp; Materials-Physics/Astr</td>
+<td class="dddefault"><p class="rightaligntext">                       $18.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MPP5</td>
+<td class="dddefault">Access 7 B Meal Plan</td>
+<td class="dddefault"><p class="rightaligntext">                    $1,383.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MPX5</td>
+<td class="dddefault">Access 7 B Tax</td>
+<td class="dddefault"><p class="rightaligntext">                       $96.12</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MS01</td>
+<td class="dddefault">Medical Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $32.70</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">PCHC</td>
+<td class="dddefault">Programs Charge-Honors College</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">REFD</td>
+<td class="dddefault">General Refund Account</td>
+<td class="dddefault"><p class="rightaligntext">                    $1,166.98</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RF01</td>
+<td class="dddefault">Recreation Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RP01</td>
+<td class="dddefault">Student Data Management Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">S001</td>
+<td class="dddefault">Student Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $184.80</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SATH</td>
+<td class="dddefault">Athletics Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $228.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SP01</td>
+<td class="dddefault">Publication Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSE</td>
+<td class="dddefault">Tech Srv/Instruct Support-COE</td>
+<td class="dddefault"><p class="rightaligntext">                       $70.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSI</td>
+<td class="dddefault">Tech Srv/Instruct Support-COS</td>
+<td class="dddefault"><p class="rightaligntext">                       $35.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">T001</td>
+<td class="dddefault">Tuition - Texas Resident</td>
+<td class="dddefault"><p class="rightaligntext">                      $700.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TEAM</td>
+<td class="dddefault">Teaching &amp; Learning Ctr Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TF01</td>
+<td class="dddefault">Transportation Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">U001</td>
+<td class="dddefault">University Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">UGAF</td>
+<td class="dddefault">Undergraduate Advising Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">YID1</td>
+<td class="dddefault">ID Card Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $3.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">F152</td>
+<td class="dddefault">Roadrunner Schlrshp-Non Need</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                      $500.00</p></td>
+</tr>
+<tr>
+<td class="dddefault">FT34</td>
+<td class="dddefault">Terry Foundation Scholarship</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $9,250.00</p></td>
+</tr>
+<tr>
+<th colspan="2" class="ddlabel" scope="row">Term Charges:</th>
+<td class="dddefault"><p class="rightaligntext">                    $9,750.00</p></td>
+</tr>
+<tr>
+<th colspan="3" class="ddlabel" scope="row">Term Credits and Payments:</th>
+<td class="dddefault"><p class="rightaligntext">                    $9,750.00</p></td>
+</tr>
+
+<tr>
+<td colspan="5" class="ddseparator">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="5" class="ddlabel" scope="row"><a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewAcctTerm?term_in=201310">Fall 2012</a></th>
+</tr>
+<tr>
+<th class="ddheader" scope="col">Detail Code</th>
+<th class="ddheader" scope="col">Description</th>
+<th class="ddheader" scope="col">Charge</th>
+<th class="ddheader" scope="col">Payment</th>
+</tr>
+<tr>
+<td class="dddefault">CA01</td>
+<td class="dddefault">Automated Services Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $300.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">CCDC</td>
+<td class="dddefault">Credit Card Expense Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $9.03</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">CHAP</td>
+<td class="dddefault">Housing-Rent</td>
+<td class="dddefault"><p class="rightaligntext">                    $3,395.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">G001</td>
+<td class="dddefault">Tuition-Designated Funds</td>
+<td class="dddefault"><p class="rightaligntext">                    $2,361.60</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">GES1</td>
+<td class="dddefault">Green/Environmental Svc Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">GPDP</td>
+<td class="dddefault">General Property Deposit</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">GPDR</td>
+<td class="dddefault">Entry to Post Property Deposit</td>
+<td class="dddefault"><p class="rightaligntext">                      -$10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">HAF1</td>
+<td class="dddefault">UTSA Housing Application Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $25.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">IE01</td>
+<td class="dddefault">International Education Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $2.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LM01</td>
+<td class="dddefault">Library Resource Charge</td>
+<td class="dddefault"><p class="rightaligntext">                      $224.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRC1</td>
+<td class="dddefault">Learning Resources-Core Curr</td>
+<td class="dddefault"><p class="rightaligntext">                       $36.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRE1</td>
+<td class="dddefault">Learning Resources-Engineering</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRLF</td>
+<td class="dddefault">Learning Resources-COLFA</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">LRS1</td>
+<td class="dddefault">Learning Resources Fee-COS</td>
+<td class="dddefault"><p class="rightaligntext">                       $35.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MEPA</td>
+<td class="dddefault">Equip &amp; Materials-Physics/Astr</td>
+<td class="dddefault"><p class="rightaligntext">                        $0.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MPP5</td>
+<td class="dddefault">Access 7 B Meal Plan</td>
+<td class="dddefault"><p class="rightaligntext">                    $1,383.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MPX5</td>
+<td class="dddefault">Access 7 B Tax</td>
+<td class="dddefault"><p class="rightaligntext">                       $96.12</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">MS01</td>
+<td class="dddefault">Medical Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $32.70</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">OR01</td>
+<td class="dddefault">Three Day Balance Orientation</td>
+<td class="dddefault"><p class="rightaligntext">                      $100.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">OR03</td>
+<td class="dddefault">Student Housing Orientation</td>
+<td class="dddefault"><p class="rightaligntext">                       $70.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">OR08</td>
+<td class="dddefault">3 Day Pre-Payment Orientation</td>
+<td class="dddefault"><p class="rightaligntext">                       $50.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">PCHC</td>
+<td class="dddefault">Programs Charge-Honors College</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">PP01</td>
+<td class="dddefault">Parking Permit</td>
+<td class="dddefault"><p class="rightaligntext">                      $210.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">REFD</td>
+<td class="dddefault">General Refund Account</td>
+<td class="dddefault"><p class="rightaligntext">                      $175.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RF01</td>
+<td class="dddefault">Recreation Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">RP01</td>
+<td class="dddefault">Student Data Management Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">S001</td>
+<td class="dddefault">Student Services Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $184.80</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SATH</td>
+<td class="dddefault">Athletics Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $228.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">SP01</td>
+<td class="dddefault">Publication Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSE</td>
+<td class="dddefault">Tech Srv/Instruct Support-COE</td>
+<td class="dddefault"><p class="rightaligntext">                       $30.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">STSI</td>
+<td class="dddefault">Tech Srv/Instruct Support-COS</td>
+<td class="dddefault"><p class="rightaligntext">                       $35.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">T001</td>
+<td class="dddefault">Tuition - Texas Resident</td>
+<td class="dddefault"><p class="rightaligntext">                      $800.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TEAM</td>
+<td class="dddefault">Teaching &amp; Learning Ctr Charge</td>
+<td class="dddefault"><p class="rightaligntext">                        $5.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TF01</td>
+<td class="dddefault">Transportation Fee</td>
+<td class="dddefault"><p class="rightaligntext">                       $20.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">TST9</td>
+<td class="dddefault">Testing Center-Chem Placement</td>
+<td class="dddefault"><p class="rightaligntext">                       $10.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">U001</td>
+<td class="dddefault">University Center Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">UGAF</td>
+<td class="dddefault">Undergraduate Advising Fee</td>
+<td class="dddefault"><p class="rightaligntext">                      $120.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">YID1</td>
+<td class="dddefault">ID Card Fee</td>
+<td class="dddefault"><p class="rightaligntext">                        $3.00</p></td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+</tr>
+<tr>
+<td class="dddefault">CCC1</td>
+<td class="dddefault">Credit Card Payment</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                      $285.25</p></td>
+</tr>
+<tr>
+<td class="dddefault">CCKW</td>
+<td class="dddefault">Check Payment-Web</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                       $50.00</p></td>
+</tr>
+<tr>
+<td class="dddefault">F152</td>
+<td class="dddefault">Roadrunner Schlrshp-Non Need</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                      $500.00</p></td>
+</tr>
+<tr>
+<td class="dddefault">FT34</td>
+<td class="dddefault">Terry Foundation Scholarship</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                    $9,250.00</p></td>
+</tr>
+<tr>
+<td class="dddefault">HDEP</td>
+<td class="dddefault">Housing Deposit</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                      $175.00</p></td>
+</tr>
+<tr>
+<td class="dddefault">PCK1</td>
+<td class="dddefault">Entry to Post Property Deposit</td>
+<td class="dddefault"><p class="rightaligntext">&nbsp;</p></td>
+<td class="dddefault"><p class="rightaligntext">                      -$10.00</p></td>
+</tr>
+<tr>
+<th colspan="2" class="ddlabel" scope="row">Term Charges:</th>
+<td class="dddefault"><p class="rightaligntext">                   $10,250.25</p></td>
+</tr>
+<tr>
+<th colspan="3" class="ddlabel" scope="row">Term Credits and Payments:</th>
+<td class="dddefault"><p class="rightaligntext">                   $10,250.25</p></td>
+</tr>
+<tr>
+</tr>
+<tr>
+<th colspan="4" class="ddlabel" scope="row">Total Account Balance:</th>
+<td class="dddefault"><p class="rightaligntext">                    $3,918.84</p></td>
+</tr>
+</tbody></table>
+
+<!--  ** START OF twbkwbis.P_CloseDoc **  -->
+<table class="plaintable" summary="This is table displays line separator at end of the page." width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="bgtabon" colspan="2" width="100%"><img src="Account%20Summary%20by%20Term_files/web_transparent.gif" alt="Transparent Image" class="headerImg" title="Transparent Image" name="web_transparent" width="10" vspace="0" hspace="0" height="3" border="0"></td></tr></tbody></table>
+<a href="#top" onmouseover="window.status='Skip to top of page'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Skip to top of page'; return true" onblur="window.status=''; return true" class="skiplinks">Skip to top of page</a>
+</div>
+<div class="footerbeforediv">
+
+</div>
+<div class="footerlinksdiv">
+<span class="pagefooterlinks">
+<map name="Account_Summary_by_Term_Links_F" title="Account Summary by Term Links">
+<p>
+<a href="#skip_Account_Summary_by_Term_Links_F" onmouseover="window.status='Skip Account Summary by Term Links'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Skip Account Summary by Term Links'; return true" onblur="window.status=''; return true" class="skiplinks">Skip Account Summary by Term Links</a>
+</p><p>[ <a href="https://asap.utsa.edu/pls/prod/bwrksumm.P_DispSumm" onmouseover="window.status='Overall Financial Aid Status'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Overall Financial Aid Status'; return true" onblur="window.status=''; return true">Overall Financial Aid Status</a>
+ | <a href="https://asap.utsa.edu/pls/prod/twbkwbis.P_GenMenu?name=bmenu.P_FAAwdMnu" onmouseover="window.status='Financial Aid Award Information Menu'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Financial Aid Award Information Menu'; return true" onblur="window.status=''; return true">Financial Aid Award Information Menu</a>
+ | <a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_ViewInstallments">Select Installment Plan</a>
+ | <a href="https://asap.utsa.edu/pls/prod/bwskoacc.P_previewinstallment">View/Select Installment Plan</a>
+ ]
+
+
+<a name="skip_Account_Summary_by_Term_Links_F"></a>
+</p></map></span></div>
+<div class="footerafterdiv">
+
+</div>
+<div class="globalafterdiv">
+
+</div>
+<div class="globalfooterdiv">
+
+</div>
+<div class="pagefooterdiv">
+<div class="div1"></div>
+<div class="div2"></div>
+<div class="div3"></div>
+<div class="div4"></div>
+<div class="div5"></div>
+<div class="div6"></div>
+<br><br>
+
+
+</div></div></body></html>
