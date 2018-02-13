@@ -2,7 +2,9 @@
 This is a simulation of a Quadcopter Stereo Camera Formation Control that uses 3 different simulators: a linear simulator; a nonlinear quadcopter simulator; Gazebo/ROS simulator. 
 
 Authors: Jonathan Lwowski, Abhijit Majumdar, Patrick Benavidez, John J. Prevost, Mo Jamshidi
+
 Laboratory: Autonomous Control Engineering Lab
+
 University: The University of Texas at San Antonio
 
 ## Link to Publication and Bibtex Citation
