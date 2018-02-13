@@ -85,6 +85,7 @@ $ roslaunch GazeboSimulation MPC_Large_Window_Controller.launch
 Lyapunov Bang Bang (Not traditional bang bang) formation control simulator:
 ```sh
 $ roslaunch GazeboSimulation BANG_Controller.launch 
+```
 
 Start the UAV Motors
 ```sh
@@ -93,4 +94,3 @@ $ rosservice call /uav2/enable_motors start
 ```
 
 
-```
