@@ -4,6 +4,10 @@ This is a simulation of a Quadcopter Stereo Camera Formation Control that uses t
 ![Quadcopter Stereo Camera Formation Control](/formctrl.gif?raw=true "formctrl")
 
 ## Dependencies
+- Gazbeo/ROS (If using ROS/Gazebo Simulation)
+    - ROS Kinetic
+    - Hector Quadrotor
+
 - Simulation of dynamics:
     - Numpy
     - Math
